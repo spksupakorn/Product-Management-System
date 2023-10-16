@@ -50,7 +50,7 @@ const addProduct = (req, res) => {
 };
 
 //PUT edit product
-const editProdoct = (req, res) => {
+const editProduct = (req, res) => {
     const product = products.find(object => object.id === parseInt(req.params.id));
     if (!product) return res.status(404).send('Product not found');
 
@@ -91,4 +91,4 @@ const deleteProduct = (req, res) => {
     res.status(200).send(`Delete product name ${productDelete.name} successfully.`);
 };
 
-module.exports = { getProductAll, getProductbyID, addProduct, editProdoct, deleteProduct };
+module.exports = { getProductAll, getProductbyID, addProduct, editProduct, deleteProduct };
